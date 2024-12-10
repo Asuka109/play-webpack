@@ -1,11 +1,15 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
 
 /** @type {import('webpack').Configuration} */
 export default {
   entry: './src/index',
   output: {
-    path: path.resolve(import.meta.dirname, 'dist'),
+    path: path.resolve(dirname, 'dist'),
     filename: 'bundle.js'
   },
   resolve: {
