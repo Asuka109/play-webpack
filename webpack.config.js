@@ -10,7 +10,8 @@ export default {
   entry: './src/index',
   output: {
     path: path.resolve(dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    clean: true,
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
